@@ -48,6 +48,6 @@ function send {
         SSID=$(echo $LINE | cut -f4 -d ' ')
 
         OUT=$DEV_ID' '$TIMESTAMP' '$SIGNAL' '$MAC' '$SSID
-        echo $OUT | tee -a "$OUTPUT"
+        $OUT | tee -a "$OUTPUT"
     done
 }

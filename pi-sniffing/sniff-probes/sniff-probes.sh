@@ -36,9 +36,6 @@ if [ "$CHANNEL_HOP" -eq 1 ] ; then
 	channel_hop &
 fi
 
-# filter with awk, then use sed to convert tabs to spaces and remove front and back quotes around SSID
-sudo tcpdump -l -I -i "$IFACE" -e -s 256 type mgt subtype probe-req | awk -f parse-tcpdump.awk | send
-
 function send {
     while read LINE; do
         DEV_ID=${DEVICEID:="UNKNOWN"}
@@ -51,3 +48,6 @@ function send {
         $OUT | tee -a "$OUTPUT"
     done
 }
+
+# filter with awk, then use sed to convert tabs to spaces and remove front and back quotes around SSID
+sudo tcpdump -l -I -i "$IFACE" -e -s 256 type mgt subtype probe-req | awk -f parse-tcpdump.awk | send
