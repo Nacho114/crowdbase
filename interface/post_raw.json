@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "a862b74e-e0e7-456d-9408-3def01a85a83",
+		"name": "crowdbase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test post raw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"timestamp\": \"114\",\n  \"deviceId\": \"pi-1\",\n  \"signal\": \"hello thitty\",\n  \"mac\": \"21211ddd\",\n  \"ssid\": \"eduroam\"\n}"
+				},
+				"url": {
+					"raw": "https://2jedi2mso8.execute-api.eu-central-1.amazonaws.com/raw?timestamp=\"22\"",
+					"protocol": "https",
+					"host": [
+						"2jedi2mso8",
+						"execute-api",
+						"eu-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"raw"
+					],
+					"query": [
+						{
+							"key": "timestamp",
+							"value": "\"22\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
