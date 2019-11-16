@@ -40,9 +40,9 @@ function send {
     while read LINE; do
         DEV_ID=${DEVICEID:="UNKNOWN"}
         TIMESTAMP=$(date +%s)
-        SIGNAL=$(echo $LINE | cut -f2 -d ' ')
-        MAC=$(echo $LINE | cut -f3 -d ' ')
-        SSID=$(echo $LINE | cut -f4 -d ' ')
+        SIGNAL=$(echo $LINE | cut -f1 -d ' ')
+        MAC=$(echo $LINE | cut -f2 -d ' ')
+        SSID=$(echo $LINE | cut -f3 -d ' ')
 
         OUT=$DEV_ID' '$TIMESTAMP' '$SIGNAL' '$MAC' '$SSID
         echo $OUT | tee -a "$OUTPUT"
