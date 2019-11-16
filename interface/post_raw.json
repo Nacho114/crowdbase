@@ -19,42 +19,25 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"eventDateTime\": \"12 sep 2022\",\n\t\"deviceId\": \"114\",\t\n\t\"sniffLog\": \"Wabadaba dub dub\"\n}"
+					"raw": "{\n  \"timestamp\": \"114\",\n  \"deviceId\": \"pi-1\",\n  \"signal\": \"hello thitty\",\n  \"mac\": \"21211ddd\",\n  \"ssid\": \"eduroam\"\n}"
 				},
 				"url": {
-					"raw": "https://5s3ag5rkx1.execute-api.eu-central-1.amazonaws.com/raw/?timestamp=10000000&deviceId=fake&signal=-22&mac=12hgf5645643fgh&ssid=eduroam",
+					"raw": "https://2jedi2mso8.execute-api.eu-central-1.amazonaws.com/raw?timestamp=\"22\"",
 					"protocol": "https",
 					"host": [
-						"5s3ag5rkx1",
+						"2jedi2mso8",
 						"execute-api",
 						"eu-central-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"raw",
-						""
+						"raw"
 					],
 					"query": [
 						{
 							"key": "timestamp",
-							"value": "10000000"
-						},
-						{
-							"key": "deviceId",
-							"value": "fake"
-						},
-						{
-							"key": "signal",
-							"value": "-22"
-						},
-						{
-							"key": "mac",
-							"value": "12hgf5645643fgh"
-						},
-						{
-							"key": "ssid",
-							"value": "eduroam"
+							"value": "\"22\""
 						}
 					]
 				}
