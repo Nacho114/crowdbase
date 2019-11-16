@@ -47,7 +47,7 @@ function send {
         OUT=$DEV_ID' '$TIMESTAMP' '$SIGNAL' '$MAC' '$SSID
         echo $OUT | tee -a "$OUTPUT"
         
-        curl -X POST https://2jedi2mso8.execute-api.eu-central-1.amazonaws.com/raw \
+        curl -X POST https://v9qyepmcue.execute-api.eu-central-1.amazonaws.com/test \
 	        -H 'Content-Type: application/x-www-form-urlencoded' \
 	        -d '{"timestamp":"'$TIMESTAMP'","deviceId":"'$DEV_ID'","mac":"'$MAC'","ssid":"'$SSID'","signal":"'$SIGNAL'"}'
     done
