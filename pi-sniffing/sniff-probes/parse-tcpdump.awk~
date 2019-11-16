@@ -19,11 +19,11 @@ match($0, /Probe Request \(.*\)/, ssid) {
 	if (length(ssid[0]) != 0) { 
 
 		# escape commas
-		# gsub(/,/, "\\,", ssid[0])
+		gsub(/,/, "\\,", ssid[0])
 		SSID=ssid[0]
 	} else {
 	
-	    SSID="UNKNOWN"
+	    SSID=UNKNOWN
 	}
 
 	# extract TIMESTAMP
@@ -31,6 +31,6 @@ match($0, /Probe Request \(.*\)/, ssid) {
 	TIMESTAMP=$1
 
 	# print them to stdout
-	print TIMESTAMP " " STRENGTH " " MAC " \"" SSID "\""
+	print STRENGTH " " MAC " \"" SSID "\""
 	system("") # flush the buffer
 }
