@@ -29,10 +29,8 @@ match($0, /Probe Request \(.*\)/, ssid) {
 	# extract TIMESTAMP
 	gsub(/\.[0-9]+/, "", $1)
 	TIMESTAMP=$1
-	
-	DEV_ID=${DEVICEID:="UNKNOWN"}
 
 	# print them to stdout
-	print DEV_ID " " TIMESTAMP " " STRENGTH " " MAC " \"" SSID "\""
+	print TIMESTAMP " " STRENGTH " " MAC " \"" SSID "\""
 	system("") # flush the buffer
 }
