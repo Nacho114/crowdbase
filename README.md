@@ -90,7 +90,7 @@ blah blah
 
 For the database we followed this tutorial https://www.linkedin.com/pulse/serverless-api-aws-python-tutorial-felipe-ramos-da-silva/
 
-We used amazon lambda functions combined with dynamodb and aws API.
+We used amazon lambda functions combined with dynamodb and aws API. The code for the lambda functions for get/put requetst can be found in the ```server/``` folder
 
 ## Website
 
