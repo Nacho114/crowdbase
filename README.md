@@ -72,7 +72,7 @@ cd re4son-kernel_4*
 ./install.sh
 ```
 
-This will take a while. Once it is done, monitor mode can be enabled.
+This will take a while. Once it is done, WiFi monitor mode can be enabled.
 
 Like in the Raspberry Pi 3, the sniffing is done by modifying the script on https://github.com/brannondorsey/sniff-probes. The script is modified in such a way that the Raspberry Pi sniffs and continuously sends the data to our database. 
 
