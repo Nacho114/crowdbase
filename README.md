@@ -88,4 +88,10 @@ blah blah
 
 ## Database
 
+For the database we followed this tutorial https://www.linkedin.com/pulse/serverless-api-aws-python-tutorial-felipe-ramos-da-silva/
+
+We used amazon lambda functions combined with dynamodb and aws API.
+
 ## Website
+
+We built a simple html site based on the skeleton found in boxmap.
