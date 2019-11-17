@@ -39,13 +39,17 @@ fi
 function send {
     while read LINE; do
         DEV_ID=${DEVICEID:="UNKNOWN"}
-        TIMESTAMP=$(date +%s)
+        TIMESTAMP=$(($(date +%s%N)/1000000))
         SIGNAL=$(echo $LINE | cut -f1 -d ' ' | grep -oP '[^a-zA-Z]+')
         MAC=$(echo $LINE | cut -f2 -d ' ')
         SSID=$(echo $LINE | cut -f3 -d ' ')
 
         OUT=$DEV_ID' '$TIMESTAMP' '$SIGNAL' '$MAC' '$SSID
         echo $OUT | tee -a "$OUTPUT"
+        
+        curl -X POST "https://v9qyepmcue.execute-api.eu-central-1.amazonaws.com/test" \
+	        -H 'Content-Type: application/x-www-form-urlencoded' \
+	        -d '{"timestamp":"'$TIMESTAMP'","deviceId":"'$DEV_ID'","mac":"'$MAC'","ssid":"'$SSID'","signal":"'$SIGNAL'"}'
     done
 }
 
