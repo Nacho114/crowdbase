@@ -47,7 +47,7 @@ network={
         key_mgmt=WPA-EAP
         eap=TTLS
         phase2="auth=MSCHAPV2"
-        identity="******@epfl.ch"
+        identity="first.last@epfl.ch"
         password="********"
         priority=1
         proactive_key_caching=1
