@@ -2,7 +2,6 @@ import React from 'react'
 
 import Layout from 'components/Layout'
 import { Container } from 'components/Grid'
-import { Link } from 'components/Link'
 import Map from 'components/Map'
 import styled from 'style'
 
@@ -30,22 +29,11 @@ const IndexPage = () => (
         <h3>
           Example: a fluid map that fills the container and different styles:
         </h3>
-        <Map height="400px" styles={['dark-v9', 'light-v9']} />
+        <Map height="400px" />
       </Section>
 
       <Section>
-        <h3>Full page examples:</h3>
-        <ul>
-          <li>
-            <Link to="/map">Map with Sidebar</Link>
-          </li>
-          <li>
-            <Link to="/map-full">Full Screen Map</Link>
-          </li>
-          {/* <li>
-          <Link to="/mdx-map">Map in MDX</Link>
-        </li> */}
-        </ul>
+ 
       </Section>
     </Container>
   </Layout>

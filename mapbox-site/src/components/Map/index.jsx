@@ -267,8 +267,8 @@ Map.propTypes = {
 Map.defaultProps = {
   width: 'auto',
   height: '100%',
-  center: [0, 0],
-  zoom: 0,
+  center: [6.567, 46.519],
+  zoom: 14.55,
   bounds: null,
   minZoom: 0,
   maxZoom: 24,
