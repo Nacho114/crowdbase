@@ -39,7 +39,7 @@ fi
 function send {
     while read LINE; do
         DEV_ID=${DEVICEID:="UNKNOWN"}
-        TIMESTAMP=$(date +%s)
+        TIMESTAMP=$(($(date +%s%N)/1000000))
         SIGNAL=$(echo $LINE | cut -f1 -d ' ' | grep -oP '[^a-zA-Z]+')
         MAC=$(echo $LINE | cut -f2 -d ' ')
         SSID=$(echo $LINE | cut -f3 -d ' ')
