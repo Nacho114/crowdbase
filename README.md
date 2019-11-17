@@ -1,5 +1,4 @@
-# Sardines
-## A tool to detect crowds
+## Sardines: A tool to detect crowds
 Ever been sick of being packed like sardines? This tool may help you avoid the crowd. Using Raspberry Pi's, this open source code will allow you to visualize crowds easily.
 ### Raspberry Pi setup 
 This project uses Raspberry Pi's to sniff WiFi Probe requests coming from people's devices. These probe requests let us know how many devices, and hence people there are in an area. Placing these Raspberry Pi's around campus allows us to create a heatmap showing the density of people around EPFL campus.
